@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ParentsBankWebApp_Group.Models.Account>
+
+@{
+    ViewBag.Title = "Accouts";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ownerMailID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recipientMailID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.openDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interestRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.principal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ownerMailID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.recipientMailID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.openDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.interestRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.principal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

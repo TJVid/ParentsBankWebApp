@@ -1,0 +1,72 @@
+﻿@model ParentsBankWebApp_Group.Models.Account
+
+@{
+    ViewBag.Title = "Account Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ownerMailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ownerMailID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recipientMailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recipientMailID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.openDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.openDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.interestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.interestRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.principal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.principal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<br />
+<hr />
+@Html.Action("Index", "Transactions")
+
+
+@Html.Action("Index", "WishListItems")

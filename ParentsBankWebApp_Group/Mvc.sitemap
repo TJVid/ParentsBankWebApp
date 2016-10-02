@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="About" controller="Home" action="About"/>
+    <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
+    <mvcSiteMapNode title="Login" controller="Account" action="Login">
+      <mvcSiteMapNode title="Account" controller="Accounts" action="Index">
+        <mvcSiteMapNode title="Create" controller="Accounts" action="Create" preservedRouteParameters="id"/>
+        <mvcSiteMapNode title="Delete" controller="Accounts" action="Delete" preservedRouteParameters="id"/>
+        <mvcSiteMapNode title="Details" controller="Accounts" action="Details" preservedRouteParameters="id">
+          <mvcSiteMapNode title="Transaction" controller="Transactions" action="Index">
+            <mvcSiteMapNode title="Create" controller="Transactions" action="Create" preservedRouteParameters="id"/>
+            <mvcSiteMapNode title="Delete" controller="Transactions" action="Delete" preservedRouteParameters="id"/>
+            <mvcSiteMapNode title="Details" controller="Transactions" action="Details" preservedRouteParameters="id"/>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="WishListItem" controller="WishListItems" action="Index">
+            <mvcSiteMapNode title="Create" controller="WishListItems" action="Create" preservedRouteParameters="id"/>
+            <mvcSiteMapNode title="Delete" controller="WishListItems" action="Delete" preservedRouteParameters="id"/>
+            <mvcSiteMapNode title="Details" controller="WishListItems" action="Details" preservedRouteParameters="id"/>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

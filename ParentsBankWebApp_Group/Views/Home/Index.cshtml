@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Parents Bank";
+}
+
+<div class="jumbotron">
+    <h1>@ViewBag.Title</h1>
+    <p class="lead">
+        This is the application to record deposits and withdrawals into an account.
+        This application is for parents who want to teach their children to save.
+        Children can also add a “wishlist” of things they want to spend their money on.
+        We make this world a better place. Cheers !!
+    </p>
+    <span style="font-size:large">We encourage Parents to Sign UP</span>
+</div>
+<div class="row">
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            To use the Parents bank you need to have an account. Please create your account or sign in.
+            Set up your Account first.
+            @*Here is the link
+                @Html.ActionLink("Create Account", "Create", "Accounts")*@
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Transactions</h2>
+        <p>
+            You can check your transactions also!
+            @*@Html.ActionLink("Manage Transactions", "Create", "Transactions")*@
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Wish List Items</h2>
+        <p>
+            You can check your Wish List Items also!
+            @*@Html.ActionLink("Wish List", "Create", "WishListItems")*@
+        </p>
+    </div>
+</div>

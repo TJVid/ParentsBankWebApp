@@ -1,0 +1,72 @@
+﻿@model ParentsBankWebApp_Group.Models.WishListItem
+
+@{
+    ViewBag.Title = "Delete Wish List Items";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>WishListItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Account.ownerMailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account.ownerMailID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.purchased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.purchased)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
